@@ -1,0 +1,19 @@
+{{!-- Utilizamos un partial para el diseño de las cards del home --}}
+
+<div class="container">
+
+        {{#each products}}
+            <div id="{{this._id}}" class="card">
+                <h3>Title: {{this.title}}</h3>
+                <p>Description: {{this.description}}</p>
+                <p>Category: {{this.category}}</p>
+                <p>Price: {{this.price}}</p>
+                <p>StockÑ{{this.stock}}</p>
+                <div>
+                    <img src="{{this.thumbnails}}" alt="{{this.title}}">
+                </div>
+                
+                <button class="btn btn-form add-to-cart" data-product-id="{{this._id}}">Add to Cart</button>
+            </div>
+        {{/each}}
+</div>

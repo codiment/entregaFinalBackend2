@@ -1,0 +1,25 @@
+<h1>Login</h1>
+<div class="login-container">
+    <form class="login-form" action="/api/sessions/login" method="post">
+        <h3>Ingrese a su cuenta</h3>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" name="password">
+        </div>
+
+        <div class="login-send-info">
+            <button class="btn-form" type="submit">Access</button>
+        </div>
+    </form>
+
+    <div>
+        <h4>¿No tienes una cuenta?</h4>
+        <p>Puedes registrarte haciendo click debajo</p>
+        <button class="btn-form"><a href="/register">Register</a></button>
+    </div>
+</div>

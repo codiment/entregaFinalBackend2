@@ -1,0 +1,46 @@
+{{!-- Aca van a ir el formulario de registro de usuarios. --}}
+
+<h1>Formulario de Registro</h1>
+<div class="formContainer">
+
+    <form class="productForm" action="/api/sessions/register" method="post" >
+        <h3>Registro de usuarios</h3>
+
+        <div>
+            <label for="first_name">Name:</label>
+            <input type="text" name="first_name" >
+        </div>
+
+        <div>
+            <label for="last_name">Apellido:</label>
+            <input type="text" name="last_name" >
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" >
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" >
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" name="password" >
+        </div>
+
+
+        <div class="sendInfo">
+            <button class="btn-form"  type="submit">Register</button>
+        </div>
+    </form>
+
+    <div>
+        <h4>¿Ya tienes un usuario registrado?</h4>
+        <p>Aqui abajo puedes iniciar sesion</p>
+        <button class="btn-form"><a href="/login">Log In</a></button>
+    </div>
+
+</div>

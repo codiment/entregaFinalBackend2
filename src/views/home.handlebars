@@ -1,0 +1,35 @@
+{{!-- Recibimos los productos y los renderizamos --}}
+<div class="container">
+    <button class="btn-form"><a href="/api/sessions/current">Profile👤</a></button>
+</div>
+<div class="container container-notif">
+
+</div>
+
+{{!-- partial con el diseno de la card --}}
+
+<div class="paginateContainer" id="dataCart" data-cart-id="{{cid}}">
+    {{> card}}
+
+    <div class="buttonContainer">
+        {{#if pagination.hasPrevPage}}
+            <button class="btn-form">
+                <a href="/products?page={{pagination.prevPage}}&limit={{pagination.limit}}&sort={{query.sort}}&category={{query.category}}">Prev</a>
+            </button>
+        {{/if}}
+
+        <span class="page">page {{pagination.page}} of {{pagination.totalPages}}</span>
+
+        {{#if pagination.hasNextPage}}
+            <button class="btn-form">
+                <a href="/products?page={{pagination.nextPage}}&limit={{pagination.limit}}&sort={{query.sort}}&category={{query.category}}">Next</a>
+            </button>
+        {{/if}}
+    </div>
+</div>
+
+
+
+
+{{!-- Mi archivo js --}}
+<script type="module" src="/static/js/cart.js" ></script>

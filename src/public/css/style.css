@@ -1,0 +1,653 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños de pantalla */
+  gap: 20px; /* Espaciado entre cards */
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Estilos para las cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center; /* Centramos el texto en las cards */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Sube un poco la card al pasar el ratón */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las imágenes */
+.card img {
+  width: 150px; /* Ancho fijo para las imágenes */
+  height: 150px; /* Alto fijo para las imágenes */
+  object-fit: cover; /* Mantiene la proporción y recorta el exceso */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+/* Estilos para los botones */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 10px; /* Espacio encima del botón */
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el título y descripción */
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.card p {
+  margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+  .card {
+    padding: 10px; /* Menos padding en pantallas pequeñas */
+  }
+  
+  .card img {
+    width: 100px; /* Ancho más pequeño en pantallas pequeñas */
+    height: 100px; /* Alto más pequeño en pantallas pequeñas */
+  }
+}
+
+/* Estilos específicos para la vista del carrito */
+
+.cartContainer {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Ajuste de la lista de productos en el carrito */
+.productContain {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilo de cada producto en el carrito */
+.cartProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste de imágenes para productos en el carrito */
+.cartProduct img {
+  width: 80px; /* Ajustar el tamaño de la imagen */
+  height: 80px; /* Mantener proporción de imagen */
+  object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Contenedor de información del producto */
+.infoContain {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Botones de acción */
+.actionContain {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn-form {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-form a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-form:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el título y el texto de cada producto */
+.font {
+  font-weight: bold;
+  color: #333;
+}
+
+.infoContain p {
+  margin: 5px 0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+  .cartProduct {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actionContain {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Estilos generales para la vista de productos */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de notificaciones */
+.container-notif {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #e7f3fe; /* Fondo suave para notificaciones */
+  color: #31708f; /* Color del texto de notificación */
+  border: 1px solid #bcdff1; /* Borde azul claro */
+  border-radius: 5px;
+}
+
+/* Contenedor de paginación */
+.paginateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Botones de paginación */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%; /* Asegura que el contenedor tome todo el ancho */
+}
+
+.buttonContainer .btn-form {
+  flex: 1; /* Permite que los botones ocupen espacio equitativo */
+  margin: 0 10px; /* Espacio entre botones */
+}
+
+/* Estilo para el texto de la paginación */
+.page {
+  flex: 2; /* Aumenta el ancho del texto */
+  text-align: center; /* Centra el texto */
+  font-weight: bold; /* Estilo de texto en negrita */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para las cards */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0; /* Margen entre cards */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .buttonContainer {
+    flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
+  }
+
+  .buttonContainer .btn-form {
+    margin: 10px 0; /* Margen vertical en botones */
+  }
+}
+
+/* Estilos generales para la página de Login */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 400px; /* Máximo ancho para el contenedor del formulario */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el formulario de login */
+.login-form {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 15px; /* Espacio entre elementos */
+}
+
+/* Estilo para las etiquetas y entradas */
+.login-form label {
+  font-weight: bold; /* Etiquetas en negrita */
+  color: #333;
+}
+
+.login-form input[type="text"] {
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.login-form input[type="text"]:focus {
+  border-color: #4CAF50; /* Color del borde en foco */
+  outline: none; /* Elimina el borde por defecto en foco */
+}
+
+/* Estilo para el botón de acceso */
+.login-send-info {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+}
+
+.btn-form {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.btn-form a {
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.btn-form:hover {
+  background-color: #45a049; /* Color al pasar el mouse */
+}
+
+/* Estilo para el mensaje de registro */
+h4 {
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Margen superior */
+}
+
+p {
+  text-align: center; /* Centra el texto */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .login-container {
+    width: 95%; /* Aumenta el ancho en pantallas pequeñas */
+  }
+}
+
+/* Estilos generales para la página de perfil */
+.profile-container {
+  width: 90%;
+  max-width: 600px; /* Máximo ancho para el contenedor del perfil */
+  margin: 20px auto; /* Centrado horizontal y margen superior */
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el título de bienvenida */
+.profile-welcome {
+  font-size: 24px; /* Tamaño de fuente grande */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilo para el correo electrónico y rol */
+.profile-email,
+.profile-role {
+  font-size: 18px; /* Tamaño de fuente mediano */
+  color: #666; /* Color de texto gris */
+  margin: 10px 0; /* Margen vertical */
+}
+
+/* Estilo para el formulario de logout */
+.profile-logout-form {
+  display: flex;
+  justify-content: center; /* Centra el botón de logout */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para el botón de logout */
+.profile-logout-btn {
+  background-color: #f44336; /* Color de fondo rojo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color en hover para el botón de logout */
+.profile-logout-btn:hover {
+  background-color: #d32f2f; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .profile-container {
+    width: 95%; /* Aumenta el ancho en pantallas pequeñas */
+  }
+
+  .profile-welcome {
+    font-size: 20px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
+
+  .profile-email,
+  .profile-role {
+    font-size: 16px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
+}
+
+/* Estilos generales para la página de creación de productos */
+.principalContainer {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra horizontalmente el contenido */
+  margin: 20px; /* Margen para el contenedor principal */
+}
+
+/* Estilos para el contenedor de productos */
+.containerProducts {
+  width: 100%;
+  max-width: 1200px; /* Máximo ancho para el contenedor de productos */
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas de productos se envuelvan */
+  justify-content: center; /* Centra las tarjetas de productos */
+  margin-bottom: 20px; /* Espacio entre productos y formulario */
+}
+
+/* Estilos para el formulario de creación de productos */
+.formContainer {
+  width: 100%;
+  max-width: 600px; /* Máximo ancho del formulario */
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para los encabezados en el formulario */
+.formContainer h4 {
+  font-size: 20px; /* Tamaño de fuente del encabezado */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilo para las etiquetas de los inputs */
+.formContainer label {
+  display: block; /* Hace que las etiquetas ocupen toda la línea */
+  margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los inputs */
+.formContainer input[type="text"],
+.formContainer input[type="number"],
+.formContainer input[type="radio"] {
+  width: 100%; /* Ancho completo del input */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espacio entre inputs */
+}
+
+/* Estilo para el contenedor de estado */
+.status {
+  margin: 10px 0; /* Margen vertical */
+}
+
+/* Estilo para el botón de envío y reinicio */
+.sendInfo {
+  display: flex;
+  justify-content: space-between; /* Espacio entre botones */
+}
+
+/* Estilo para los botones */
+.btn-form {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color en hover para los botones */
+.btn-form:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .formContainer {
+    width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+  }
+}
+
+/* Estilos generales para el formulario de registro */
+.formContainer {
+  width: 100%;
+  max-width: 500px; /* Máximo ancho del formulario */
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px auto; /* Margen automático para centrar */
+}
+
+/* Estilo para los encabezados en el formulario */
+.formContainer h3 {
+  font-size: 22px; /* Tamaño de fuente del encabezado */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilo para las etiquetas de los inputs */
+.formContainer label {
+  display: block; /* Hace que las etiquetas ocupen toda la línea */
+  margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los inputs */
+.formContainer input[type="text"],
+.formContainer input[type="number"] {
+  width: 100%; /* Ancho completo del input */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espacio entre inputs */
+}
+
+/* Estilo para el botón de envío */
+.sendInfo {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+}
+
+/* Estilo para los botones */
+.btn-form {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color en hover para los botones */
+.btn-form:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo para la sección de inicio de sesión */
+.formContainer h4 {
+  text-align: center; /* Centrado del texto */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para el párrafo de redirección */
+.formContainer p {
+  text-align: center; /* Centrado del texto */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .formContainer {
+    width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+  }
+}
+
+/* Estilos generales para el contenedor del ticket de compra */
+.form-container {
+  width: 100%;
+  max-width: 600px; /* Máximo ancho del contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px auto; /* Margen automático para centrar */
+}
+
+/* Estilo para los encabezados en el ticket */
+.form-container h1 {
+  font-size: 28px; /* Tamaño de fuente del título */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.form-container h2 {
+  font-size: 24px; /* Tamaño de fuente del subtítulo */
+  color: #4CAF50; /* Color verde */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo para los párrafos */
+.form-container p {
+  font-size: 18px; /* Tamaño de fuente de los párrafos */
+  color: #555; /* Color del texto */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+/* Estilo para el contenedor de productos sin stock */
+.productContain {
+  margin-top: 20px; /* Margen superior */
+  background-color: #fff; /* Fondo blanco */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el encabezado de productos sin stock */
+.productContain h2 {
+  font-size: 20px; /* Tamaño de fuente del encabezado */
+  color: #ff5722; /* Color rojo */
+}
+
+/* Estilo para la lista de productos sin stock */
+.productContain ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0; /* Sin espaciado interno */
+}
+
+/* Estilo para los elementos de la lista de productos sin stock */
+.productContain li {
+  font-size: 16px; /* Tamaño de fuente de los elementos de lista */
+  color: #555; /* Color del texto */
+  padding: 5px 0; /* Espaciado vertical */
+}
+
+/* Estilo para el botón de volver al perfil */
+.btn-form {
+  display: block; /* Hace que el botón ocupe toda la línea */
+  margin: 20px auto; /* Margen automático para centrar */
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color en hover para el botón */
+.btn-form:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .form-container {
+    width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+  }
+}
