@@ -72,7 +72,7 @@ class ProductController {
     try {
         const productFound = await ProductServices.getProduct(pid);
 
-        // Cambia esto para evaluar si productFound es una cadena de error
+        
         if (typeof productFound === "string") {
             res.status(404).send(`No hay productos con el id ${pid}`);
         } else {

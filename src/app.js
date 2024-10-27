@@ -5,12 +5,21 @@ import cookieParser from "cookie-parser";
 import passport from "passport";
 import ProductServices from "./services/product.service.js";
 import initializePassport from "./config/passport.config.js";
-import "./database.js"
+
+import { Command } from "commander";
+import configInstance from "./config/config.js";
+
+const program = new Command();
+program.option("-e, --env <environment>", "Entorno de la aplicación", "development");
+program.parse(process.argv);
+
+const option = program.opts();
+process.env.NODE_ENV = option.env;
 
 
 
 const app = express();
-const PUERTO = 8080 ;
+const PUERTO = configInstance.get("PORT");
 
 
 

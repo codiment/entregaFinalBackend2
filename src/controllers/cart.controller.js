@@ -60,7 +60,7 @@ class CartController {
 
 
             // Verificamos el valor y le damos la respuesta correspondiente.
-        add ? res.status(200).send({message: `Se agregó el producto ${pid} al carrito ${cid} exitosamente! 😁`}) : res.status(404).send({message: `No es posible agregar el producto ${pid} en el carrito ${cid} `});
+        add ? res.status(200).send({message: `Se agregó el producto ${pid} al carrito ${cid} exitosamente!`}) : res.status(404).send({message: `No es posible agregar el producto ${pid} en el carrito ${cid} `});
 
         } catch (error) {
             res.status(500).send("No es posible agregar el producto al carrito momentaneamente");
